@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Window</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">Главная</a>
+        <a href="./modal.html">Modal</a>
+        <a href="./forms.html">Forms</a>
+      </nav>
+    </header>
+
+    <form class="js-speaker-form" autocomplete="off">
+      <label for="user-id">UserID</label>
+      <input type="text" name="user-name" id="user-id" placeholder="Neo Anderson" autofocus />
+
+      <label for="tel">Phone</label>
+      <input type="tel" name="tel" id="tel" />
+
+      <label for="mail">e-Mail</label>
+      <input type="email" name="mail" id="mail" autocomplete="on" />
+
+      <!-- <fieldset class="fieldset">
+          <input type="checkbox" name="topic" value="html" id="html" />
+          <label for="html">HTML</label>
+
+          <input type="checkbox" name="topic" value="css" id="css" />
+          <label for="css">CSS</label>
+
+          <input type="checkbox" name="topic" value="js" id="js" />
+          <label for="js">JawaScript</label>
+        </fieldset> -->
+
+      <div role="group" class="form-box">
+        <input type="checkbox" name="topic" value="html" id="html" checked />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="topic" value="css" id="css" />
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topic" value="js" id="js" />
+        <label for="js">JawaScript</label>
+      </div>
+
+      <div role="group" class="level-box">
+        <input type="radio" name="level" value="jr" id="junior" checked />
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="level" value="mdl" id="middle" />
+        <label for="middle">Middle</label>
+
+        <input type="radio" name="level" value="sr" id="senior" />
+        <label for="senior">Senior</label>
+      </div>
+
+      <label for="date">Report Date</label>
+      <input type="datetime-local" name="time" id="date" min="" max="" />
+
+      <br />
+
+      <label for="upload">Upload yor PDF</label>
+      <input type="file" name="pdf" id="upload" />
+
+      <br />
+
+      <label for="feedback">Feedback</label>
+      <textarea name="feedback" id="feedback" cols="60" rows="10"></textarea>
+
+      <br />
+
+      <input type="checkbox" name="agrmnt" id="agreement" />
+      <label for="agreement">Agree to conditions</label>
+
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="./js/forms.js"></script>
+  </body>
+</html>

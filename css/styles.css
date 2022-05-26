@@ -184,13 +184,14 @@ select {
 .container::after {
   content: '';
   position: absolute;
-  top: 25%;
-  left: 0;
   width: 100px;
   height: 100px;
   background-color: #fff;
   border-radius: 50px;
   outline: 1px solid red;
+
+  top: 25%;
+  left: 0;
 
   animation-name: whiteCircle;
   animation-duration: 1000ms;
@@ -211,4 +212,27 @@ select {
 }
 .container:hover .content-circle {
   animation-play-state: paused;
+}
+
+/* Forms */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+input {
+  padding: 8px;
+  font-family: inherit;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.form {
+  display: block;
+  outline: 1px solid green;
 }
