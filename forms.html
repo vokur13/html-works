@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/forms.css" />
   </head>
   <body>
@@ -21,15 +20,28 @@
       </nav>
     </header>
 
-    <form class="js-speaker-form" autocomplete="off">
-      <label for="user-id">UserID</label>
-      <input type="text" name="user-name" id="user-id" placeholder="Neo Anderson" autofocus />
+    <form class="form js-speaker-form" autocomplete="off">
+      <div class="form-field">
+        <label for="user-id" class="form-label">UserID</label>
+        <input
+          class="form-input"
+          type="text"
+          name="user-name"
+          id="user-id"
+          placeholder="Neo Anderson"
+          autofocus
+        />
+      </div>
 
-      <label for="tel">Phone</label>
-      <input type="tel" name="tel" id="tel" />
+      <div class="form-field">
+        <label for="tel">Phone</label>
+        <input type="tel" name="tel" id="tel" placeholder="+1 418 6574850" />
+      </div>
 
-      <label for="mail">e-Mail</label>
-      <input type="email" name="mail" id="mail" autocomplete="on" />
+      <div class="form-field">
+        <label for="mail">e-Mail</label>
+        <input type="email" name="mail" id="mail" placeholder="matrix@msn.com" autocomplete="on" />
+      </div>
 
       <!-- <fieldset class="fieldset">
           <input type="checkbox" name="topic" value="html" id="html" />
@@ -42,47 +54,63 @@
           <label for="js">JawaScript</label>
         </fieldset> -->
 
-      <div role="group" class="form-box">
-        <input type="checkbox" name="topic" value="html" id="html" checked />
-        <label for="html">HTML</label>
+      <div role="group" class="group">
+        <b class="group-command">Select report topic</b>
+        <ul class="topic-options">
+          <li>
+            <input type="checkbox" name="topic" value="html" id="html" checked />
+            <label for="html">HTML</label>
+          </li>
 
-        <input type="checkbox" name="topic" value="css" id="css" />
-        <label for="css">CSS</label>
+          <li>
+            <input type="checkbox" name="topic" value="css" id="css" />
+            <label for="css">CSS</label>
+          </li>
 
-        <input type="checkbox" name="topic" value="js" id="js" />
-        <label for="js">JawaScript</label>
+          <li>
+            <input type="checkbox" name="topic" value="js" id="js" />
+            <label for="js">JavaScript</label>
+          </li>
+        </ul>
       </div>
 
-      <div role="group" class="level-box">
-        <input type="radio" name="level" value="jr" id="junior" checked />
-        <label for="junior">Junior</label>
-
-        <input type="radio" name="level" value="mdl" id="middle" />
-        <label for="middle">Middle</label>
-
-        <input type="radio" name="level" value="sr" id="senior" />
-        <label for="senior">Senior</label>
+      <div role="group" class="group">
+        <h2 class="group-title">Expert level</h2>
+        <ul class="level-options">
+          <li>
+            <input type="radio" name="level" value="jr" id="junior" checked />
+            <label for="junior">Junior</label>
+          </li>
+          <li>
+            <input type="radio" name="level" value="mdl" id="middle" />
+            <label for="middle">Middle</label>
+          </li>
+          <li>
+            <input type="radio" name="level" value="sr" id="senior" />
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
       </div>
 
-      <label for="date">Report Date</label>
-      <input type="datetime-local" name="time" id="date" min="" max="" />
+      <div class="form-field">
+        <label for="date">Report Date</label>
+        <input type="datetime-local" name="time" id="date" class="date" />
+      </div>
 
-      <br />
+      <div class="form-field">
+        <label for="upload">Upload yor PDF</label>
+        <input type="file" name="pdf" id="upload" />
+      </div>
 
-      <label for="upload">Upload yor PDF</label>
-      <input type="file" name="pdf" id="upload" />
+      <div class="form-field">
+        <label for="feedback">Feedback</label>
+        <textarea name="feedback" id="feedback" placeholder="Введите текст"></textarea>
+      </div>
 
-      <br />
-
-      <label for="feedback">Feedback</label>
-      <textarea name="feedback" id="feedback" cols="60" rows="10"></textarea>
-
-      <br />
-
-      <input type="checkbox" name="agrmnt" id="agreement" />
-      <label for="agreement">Agree to conditions</label>
-
-      <br />
+      <div class="form-field">
+        <input type="checkbox" name="agrmnt" id="agreement" />
+        <label for="agreement">Agree to conditions</label>
+      </div>
 
       <button type="submit">Submit</button>
     </form>

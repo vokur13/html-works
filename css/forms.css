@@ -9,22 +9,80 @@ body {
   color: #2a2a2a;
 }
 
-/* .js-speaker-form {
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 600px;
+  outline: 1px solid red;
+}
+.form-field {
   display: flex;
-} */
-.fieldset {
+  flex-direction: column;
+  outline: 1px solid green;
+  margin-bottom: 20px;
+}
+.form-field label {
+  margin-bottom: 5px;
+}
+.form-field input {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid blue;
+  font-size: 20px;
+}
+.form-field input::placeholder {
+  /* Геометрия на этот псевдоэлемент не применяется */
+  color: pink;
+  text-align: end;
+}
+/* .fieldset {
   display: flex;
   align-items: center;
 }
 .fieldset > label {
   margin-right: 50px;
+} */
+.group {
+  margin-bottom: 20px;
 }
-.form-box {
-  display: flex;
+.group-command {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-.level-box {
+.group-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.topic-options,
+.level-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topic-options li {
   display: flex;
+  align-items: center;
+}
+.topic-options input[type='checkbox'] {
+  /* width: 40px;
+  height: 40px; */
+}
+.topic-options label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.level-options {
 }
 textarea {
   resize: none;
+  height: 100px;
+}
+.form-field .date {
+  border-radius: 4px;
+  padding: 20px 40px;
+}
+.feedback {
+  padding: 8px;
 }
