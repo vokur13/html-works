@@ -21,8 +21,19 @@
     </header>
 
     <form class="form js-speaker-form" autocomplete="off">
-      <div class="form-field">
-        <label for="user-id" class="form-label">UserID</label>
+      <label class="form-field">
+        <input
+          class="form-input"
+          type="text"
+          name="user-name"
+          placeholder="Neo Anderson"
+          autofocus
+        />
+        <span class="form-label">Name</span>
+        <span class="icon"></span>
+      </label>
+
+      <!-- <div class="form-field">
         <input
           class="form-input"
           type="text"
@@ -31,17 +42,46 @@
           placeholder="Neo Anderson"
           autofocus
         />
-      </div>
+        <label for="user-id" class="form-label">UserID</label>
+        <span class="icon"></span>
+      </div> -->
 
-      <div class="form-field">
-        <label for="tel">Phone</label>
-        <input type="tel" name="tel" id="tel" placeholder="+1 418 6574850" />
-      </div>
+      <label class="form-field">
+        <input class="form-input" type="tel" name="tel" placeholder="+1 418 6574850" />
+        <span class="form-label">Phone</span>
+        <span class="icon"></span>
+      </label>
 
-      <div class="form-field">
-        <label for="mail">e-Mail</label>
-        <input type="email" name="mail" id="mail" placeholder="matrix@msn.com" autocomplete="on" />
-      </div>
+      <!-- <div class="form-field">
+        <input class="form-input" type="tel" name="tel" id="tel" placeholder="+1 418 6574850" />
+        <label for="tel" class="form-label">Phone</label>
+        <span class="icon"></span>
+      </div> -->
+
+      <label class="form-field">
+        <input
+          class="form-input"
+          type="email"
+          name="mail"
+          placeholder="matrix@msn.com"
+          autocomplete="on"
+        />
+        <span class="form-label">E-mail</span>
+        <span class="icon"></span>
+      </label>
+
+      <!-- <div class="form-field">
+        <input
+          class="form-input"
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="matrix@msn.com"
+          autocomplete="on"
+        />
+        <label for="mail" class="form-label">e-Mail</label>
+        <span class="icon"></span>
+      </div> -->
 
       <!-- <fieldset class="fieldset">
           <input type="checkbox" name="topic" value="html" id="html" />
@@ -58,18 +98,27 @@
         <b class="group-command">Select report topic</b>
         <ul class="topic-options">
           <li>
-            <input type="checkbox" name="topic" value="html" id="html" checked />
-            <label for="html">HTML</label>
+            <label class="form-field chckbx">
+              <input class="checkbox" type="checkbox" name="topic" value="html" checked />
+              <span class="chckbx-icon"></span>
+              <span class="chckbx-label">HTML</span>
+            </label>
           </li>
 
           <li>
-            <input type="checkbox" name="topic" value="css" id="css" />
-            <label for="css">CSS</label>
+            <label class="form-field chckbx">
+              <input class="checkbox" type="checkbox" name="topic" value="css" />
+              <span class="chckbx-icon"></span>
+              <span class="chckbx-label">CSS</span>
+            </label>
           </li>
 
           <li>
-            <input type="checkbox" name="topic" value="js" id="js" />
-            <label for="js">JavaScript</label>
+            <label class="form-field chckbx">
+              <input class="checkbox" type="checkbox" name="topic" value="js" />
+              <span class="chckbx-icon"></span>
+              <span class="chckbx-label">JavaScript</span>
+            </label>
           </li>
         </ul>
       </div>
@@ -116,5 +165,19 @@
     </form>
 
     <script src="./js/forms.js"></script>
+
+    <!-- Скрипт для изменения цвета border -->
+
+    <button onclick="myFunction()">Попробовать</button>
+
+    <div id="myDIV">
+      <h1>Привет</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById('myDIV').style.borderColor = 'lightblue';
+      }
+    </script>
   </body>
 </html>
