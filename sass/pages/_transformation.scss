@@ -1,0 +1,38 @@
+.position {
+  width: 1000px;
+  margin: 0 auto;
+  outline: 1px solid green;
+  &__container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 1px solid teal;
+  }
+  &__box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    outline: 1px solid black;
+    &--red {
+      background-color: red;
+      transform: translate3d(100px, 50px, 75px);
+    }
+    &--green {
+      background-color: green;
+      transform: rotateZ(45deg);
+    }
+    &--blue {
+      background-color: blue;
+      transform: scale(0.8);
+    }
+    &--grey {
+      background-color: grey;
+      transform: skewX(45deg);
+    }
+  }
+}
